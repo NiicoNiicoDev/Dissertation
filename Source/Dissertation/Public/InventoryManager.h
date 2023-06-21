@@ -68,15 +68,6 @@ class DISSERTATION_API UInventoryManager : public UActorComponent
 	GENERATED_BODY()
 
 private:
-	
-	UPROPERTY(VisibleAnywhere)
-	TArray<FInventoryPlaceableActor> inventoryPlaceables;
-
-	UPROPERTY(VisibleAnywhere)
-	TArray<FInventoryItemData> inventoryContents;
-	
-	UPROPERTY(EditAnywhere)
-	UBoxComponent* inventoryBounds;
 
 public:	
 	// Sets default values for this component's properties
@@ -89,13 +80,6 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
-	void GetInventoryOverlappingActors();
-
-	void UpdateInventoryContents();
-
-	UFUNCTION(BlueprintCallable)
-		void UpdateInventoryData();
 
 		
 };
